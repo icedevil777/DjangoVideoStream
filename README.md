@@ -14,7 +14,7 @@ python manage.py runserver
 3. Go to  http://127.0.0.1:8000/
 4. Enjoy 
 
-![](templates/img.png)
+![](ajax/static/ajax/img/img.png)
 
 
 

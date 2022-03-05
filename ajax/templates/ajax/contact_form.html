@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{% static 'ajax/css/main.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VideoStream</title>
+</head>
+<body>
+    <h1>The Video Stream</h1>
+    <div id="main_div">
+        <div id="stream_div">
+            <img src="{% url 'video_one' %}">
+        </div>
+        <div id="trackbar_div">
+            <form name="contact-submit" class="target1" id="target" >
+                <div class="smale_div">
+                    <div class="h_div" >
+                        <h1 class="word">H</h1>
+                    </div>
+                    <div class="HSV_div">
+                        <label for="H_high">high</label>
+                        <input class="HSV" id="H_high" type="range"  max="255" value="255" name="H_high">
+                        <label for="H_low">low</label>
+                        <input class="HSV" id="H_low" type="range"  max="255" value="0" name="H_low">
+                    </div>
+                </div>
+                <div class="smale_div">
+                    <div class="h_div">
+                        <h1 class="word">S</h1>
+                    </div>
+                    <div class="HSV_div">
+                        <label for="S_high">high</label>
+                        <input class="HSV" id="S_high" type="range"  max="255" value="255" name="S_high">
+                        <label for="S_low">low</label>
+                        <input class="HSV" id="S_low" type="range"  max="255" value="0" name="S_low">
+                    </div>
+                </div>
+                <div class="smale_div">
+                    <div class="h_div">
+                        <h1 class="word">V</h1>
+                    </div>
+                    <div class="HSV_div">
+                    <label for="V_high">high</label>
+                    <input class="HSV" id="V_high" type="range"  max="255" value="255" name="V_high">
+                    <label for="V_low">low</label>
+                    <input class="HSV" id="V_low" type="range"  max="255" value="0" name="V_low">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+{% block extrahead %}
+    <script type="text/javascript" src="{% static 'ajax/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'ajax/js/main.js' %}"></script>
+{% endblock extrahead %}
+
+</body>
+</html>
