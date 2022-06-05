@@ -13,40 +13,6 @@ lower_bound = (0, 0, 0)
 upper_bound = (250, 250, 250)
 
 
-# def contact_form(request):
-#     global data
-#     global lower_bound
-#     global upper_bound
-#     form = ContactForm()
-#     if request.method == "POST" and request.accepts('media_type'):
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             # H_high = form.cleaned_data['H_high']
-#             # S_high = form.cleaned_data['S_high']
-#             # V_high = form.cleaned_data['V_high']
-#             # H_low = form.cleaned_data['H_low']
-#             # S_low = form.cleaned_data['S_low']
-#             # V_low = form.cleaned_data['V_low']
-#             # data = {"H_high": H_high, "S_high": S_high, "V_high": V_high,
-#             #         "H_low": H_low, "S_low": S_low, "V_low": V_low}
-#
-#             return JsonResponse(data, status=200)
-#         else:
-#             errors = form.errors.as_json()
-#             return JsonResponse({"errors": errors}, status=400)
-#
-#     H_high = request.GET.get('H_high')
-#     S_high = request.GET.get('S_high')
-#     V_high = request.GET.get('V_high')
-#     H_low = request.GET.get('H_low')
-#     S_low = request.GET.get('S_low')
-#     V_low = request.GET.get('V_low')
-#     if H_high is not None and S_high is not None and V_high is None \
-#             and H_low is None and S_low is None and V_low is None:
-#         lower_bound = (int(H_low), int(S_low), int(V_low))
-#         upper_bound = (int(H_high), int(S_high), int(V_high))
-#     return render(request, "contact_form.html", {"form": form})
-
 def contact_form(request):
     global data
     global lower_bound
